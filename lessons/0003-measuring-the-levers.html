@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 3 – Measuring the levers</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body><main>
+<nav class="crumbs"><a href="0002-modules-to-value-levers.html">Lesson 2</a> · <a href="../reference/glossary.html">Glossary</a> · Lesson 3</nav>
+<div class="kicker">Lesson 3 · about 10 minutes</div>
+<h1>Measuring the levers</h1>
+<p class="lede">A lever you can't measure is a slogan. Here is one metric per lever, how to calculate it, and the trap hiding in each.</p>
+
+<h2>Two metrics with standard definitions</h2>
+<p><strong>Fill rate</strong> = shifts filled ÷ shifts requested × 100. The catch is the denominator: you must also count requests that went unfilled, which needs a system that records every request, not just confirmed placements (<a href="https://www.beeple.eu/en/post/fill-rate-the-kpi-that-determines-how-much-revenue-your-agency-is-missing-out-on">Beeple</a>, <a href="https://gigsmart.com/glossary/fill-rate">GigSmart</a>).</p>
+<p><strong>Time-to-fill</strong> = time from a client submitting a request to the worker starting. <strong>No-show rate</strong> = share of booked workers who don't appear (<a href="https://gigsmart.com/glossary/key-performance-indicator-kpi">GigSmart KPI glossary</a>).</p>
+<p class="claim">These sources are staffing-software vendors. The definitions are simple and consistent; I deliberately leave out their benchmark numbers because they are unverified.</p>
+
+<h2>One metric per lever</h2>
+<table>
+<tr><th>Lever</th><th>Metric</th><th>Trap</th></tr>
+<tr><td>Speed</td><td>Time-to-fill</td><td>Urgent and planned shifts mixed together hide the real picture</td></tr>
+<tr><td>Reliability</td><td>No-show rate</td><td>High fill with high no-shows can mean poor matches</td></tr>
+<tr><td>Pay accuracy*</td><td>Timesheet corrections per 100 shifts</td><td>Needs correction events to be logged</td></tr>
+<tr><td>Compliance*</td><td>Shifts blocked by expired documents</td><td>Counts only what the system catches</td></tr>
+<tr><td>Admin time*</td><td>Coordinator minutes per placement</td><td>Hard to measure without a time baseline</td></tr>
+</table>
+<p class="claim">* Proposed by this course. I found no standard definition for these three, so treat them as starting points.</p>
+
+<div class="note"><strong>Before and after.</strong> To show a lever worked, you need a baseline measured before the change. Without it, "75% faster" is just a number. That is why vendor claims in Lesson 2 are only hypotheses.</div>
+
+<h2>Practice</h2>
+<div class="quiz"><p>An agency received 40 shift requests and filled 34. What is its fill rate?</p>
+<button>Fill rate is 74 percent</button>
+<button>Fill rate is 90 percent</button>
+<button data-correct>Fill rate is 85 percent</button>
+<button>Fill rate is 66 percent</button>
+<div class="why">34 ÷ 40 = 0.85. The 6 unfilled requests stay in the denominator.</div></div>
+
+<div class="quiz"><p>50 shifts were booked and 4 workers did not appear. What is the no-show rate?</p>
+<button data-correct>No-show rate is 8 percent</button>
+<button>No-show rate is 4 percent</button>
+<button>No-show rate is 92 percent</button>
+<button>No-show rate is 12 percent</button>
+<div class="why">4 ÷ 50 = 0.08.</div></div>
+
+<div class="quiz"><p>An agency's fill rate rises but no-shows rise too. What is the likeliest reading?</p>
+<button>Speed improved, so the platform clearly works</button>
+<button data-correct>Shifts get filled, but matches may be weak</button>
+<button>Compliance improved, so more workers qualify</button>
+<button>Pay accuracy improved, so workers show up</button>
+<div class="why">Fill rate alone counts bookings, not attendance. Pairing it with no-show rate exposes poor matches. This reasoning follows the <a href="https://innovationuae.com/?p=1547">warning in this KPI roundup</a>, which is a weak source.</div></div>
+
+<h2>Retrieve it</h2>
+<p>From memory: write the fill rate formula, then name the metric you'd use for the pay-accuracy lever and one weakness of it.</p>
+<textarea class="recall" placeholder="Fill rate = … ; for pay accuracy I'd measure … but …"></textarea>
+<details class="reveal"><summary>Check</summary>Fill rate = shifts filled ÷ shifts requested × 100. Pay accuracy: timesheet corrections per 100 shifts, which depends on corrections being recorded.</details>
+
+<h2>Read next</h2>
+<p><strong>Primary source:</strong> <a href="https://www.beeple.eu/en/post/fill-rate-the-kpi-that-determines-how-much-revenue-your-agency-is-missing-out-on">Beeple's piece on fill rate</a>. Read it for the denominator argument.</p>
+<div class="note"><strong>Ask your teacher.</strong> Unsure why a baseline matters, or want a better pay-accuracy metric? Ask in the terminal.</div>
+</main><script src="../assets/quiz.js"></script></body></html>

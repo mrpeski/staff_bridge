@@ -1,0 +1,64 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 5 – Prioritising features</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body><main>
+<nav class="crumbs"><a href="0004-the-sixty-second-pitch.html">Lesson 4</a> · <a href="../reference/glossary.html">Glossary</a> · Lesson 5</nav>
+<div class="kicker">Lesson 5 · about 10 minutes</div>
+<h1>Prioritising features by lever</h1>
+<p class="lede">Every feature idea competes for limited effort. RICE gives a simple way to rank them, and your levers tell you what "impact" means.</p>
+
+<h2>RICE in one minute</h2>
+<p><strong>Score = (Reach × Impact × Confidence) ÷ Effort.</strong> Reach is people affected per period. Impact is per-person benefit on a scale of 3, 2, 1, 0.5, 0.25. Confidence is how sure you are (100%, 80%, 50%). Effort is person-months. A higher score is a better candidate, but the result is a guide, not a rule (<a href="https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/">Intercom</a>).</p>
+<div class="note"><strong>Where levers fit.</strong> Before scoring, name the lever a feature moves and the metric from Lesson 3 it should shift. A feature with no lever or metric can't be given an honest Impact.</div>
+
+<h2>Three invented features</h2>
+<p class="claim">These are hypothetical examples for practice. They are not Engine Hire's roadmap, and the numbers are made up.</p>
+<table>
+<tr><th>Feature</th><th>Lever</th><th>Metric</th></tr>
+<tr><td>A. Reminder push two hours before a shift</td><td>Reliability</td><td>No-show rate</td></tr>
+<tr><td>B. Pay estimate screen after each clock-out</td><td>Pay accuracy</td><td>Corrections per 100 shifts</td></tr>
+<tr><td>C. Worker alerts before documents expire</td><td>Compliance</td><td>Shifts blocked by expired documents</td></tr>
+</table>
+
+<h2>Predict first</h2>
+<p>Assumptions: A reaches 800 workers a quarter, impact 1, confidence 80%, effort 1 person-month. B reaches 800, impact 2, confidence 50%, effort 3. C reaches 300, impact 2, confidence 80%, effort 1.</p>
+<div class="quiz"><p>Using RICE, which feature ranks first?</p>
+<button>Feature B, because impact per worker is greatest</button>
+<button data-correct>Feature A, because reach is high and effort is low</button>
+<button>Feature C, because impact and confidence are strong</button>
+<button>All tie, because the three score identically</button>
+<div class="why">A scores 640, C 480, B about 267. B's low confidence and high effort pull it down. Check below.</div></div>
+
+<h2>Now test it</h2>
+<p>Edit any number and watch the ranking change. Try raising B's confidence to 100% and its effort to 1.</p>
+<table class="rice">
+<tr><th>Feature</th><th>Reach</th><th>Impact</th><th>Conf %</th><th>Effort</th><th>Score</th><th>Rank</th></tr>
+<tr data-rice><td>A</td><td><input data-f="r" value="800"></td><td><input data-f="i" value="1"></td><td><input data-f="c" value="80"></td><td><input data-f="e" value="1"></td><td class="score"></td><td class="rank"></td></tr>
+<tr data-rice><td>B</td><td><input data-f="r" value="800"></td><td><input data-f="i" value="2"></td><td><input data-f="c" value="50"></td><td><input data-f="e" value="3"></td><td class="score"></td><td class="rank"></td></tr>
+<tr data-rice><td>C</td><td><input data-f="r" value="300"></td><td><input data-f="i" value="2"></td><td><input data-f="c" value="80"></td><td><input data-f="e" value="1"></td><td class="score"></td><td class="rank"></td></tr>
+</table>
+
+<h2>Practice</h2>
+<div class="quiz"><p>Why does RICE include a Confidence factor?</p>
+<button>It rewards teams that finish features very quickly</button>
+<button>It converts person-months into estimated revenue figures</button>
+<button data-correct>It discounts ideas resting on guesses, not evidence</button>
+<button>It measures how many users already asked for it</button>
+<div class="why">Per Intercom, confidence stops over-enthusiasm for untested ideas.</div></div>
+
+<div class="quiz"><p>When might you ignore the top RICE score?</p>
+<button>When the lowest-scoring feature is cheapest to build</button>
+<button data-correct>When a dependency or legal need forces the order</button>
+<button>When the team dislikes the feature name chosen</button>
+<button>When the score is not a round number</button>
+<div class="why">The framework calls itself a guide; dependencies and business requirements can justify deviating.</div></div>
+
+<h2>Retrieve it</h2>
+<p>From memory: write the RICE formula, then say which lever and metric you'd attach to a feature that lets workers see open shifts on a map.</p>
+<textarea class="recall" placeholder="Score = … ; lever … ; metric …"></textarea>
+<details class="reveal"><summary>Check</summary>Score = (Reach × Impact × Confidence) ÷ Effort. A shift map mainly pulls the speed lever (matching the right worker sooner), measured by time-to-fill. Other answers can be defended if you name the mechanism.</details>
+
+<h2>Read next</h2>
+<p><strong>Primary source:</strong> <a href="https://www.intercom.com/blog/rice-simple-prioritization-for-product-managers/">Intercom's RICE article</a>, the original description of the framework.</p>
+<div class="note"><strong>Ask your teacher.</strong> Want to score your own feature ideas, or compare RICE with other methods? Ask in the terminal. I'm also still waiting on your Lesson 4 client pitch.</div>
+</main><script src="../assets/quiz.js"></script><script src="../assets/rice.js"></script></body></html>

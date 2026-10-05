@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Lesson 7 – Testing the claims</title>
+<link rel="stylesheet" href="../assets/style.css"></head><body><main>
+<nav class="crumbs"><a href="0006-mixed-review.html">Lesson 6</a> · <a href="../reference/glossary.html">Glossary</a> · Lesson 7</nav>
+<div class="kicker">Lesson 7 · about 12 minutes</div>
+<h1>Testing the claims</h1>
+<p class="lede">Engine Hire says its app boosts retention by 60% and cuts communication time by 75%. What would it take to believe that?</p>
+
+<h2>What the evidence looks like today</h2>
+<p>Almost everything comes from Engine Hire's own pages. The App Store listing has <a href="https://apps.apple.com/my/app/enginehire-app/id6444958739">no ratings or reviews yet</a>, and <a href="https://www.getapp.com/hr-employee-management-software/a/enginehire/reviews/">GetApp</a> holds five reviews with little detail. So the honest position is: plausible, not demonstrated.</p>
+
+<h2>Why before-and-after isn't enough</h2>
+<p>Comparing a metric before and after an intervention has no control, so it can't separate the product's effect from other changes or natural trends (<a href="https://statsig.com/perspectives/ab-testing-correlation-causation-pitfalls">Statsig</a>). A <strong>confounder</strong> is a third factor that moves the outcome too (<a href="https://confidence.spotify.com/glossary/confounding-variables.md">Spotify Confidence</a>). A good causal claim names the <strong>counterfactual</strong>: what would have happened without the product.</p>
+<div class="note"><strong>Two fixes.</strong> Random assignment spreads other factors evenly across groups. When you can't randomise, roll the change out to some branches and not others, then compare the <em>change</em> in each group, which cancels anything affecting both equally (<a href="https://statsig.com/perspectives/ab-testing-correlation-causation-pitfalls">same source</a>).</div>
+
+<h2>Practice</h2>
+<div class="quiz"><p>An agency adopts the app in January and no-shows fall in February. What is missing?</p>
+<button>A longer list of the app's modules</button>
+<button>A quote from the vendor's sales team</button>
+<button data-correct>A comparison group that didn't adopt it</button>
+<button>A bigger count of workers who downloaded it</button>
+<div class="why">Without a comparison group you can't rule out seasonal or other changes.</div></div>
+
+<div class="quiz"><p>An agency also raised pay rates in January. This pay rise is a:</p>
+<button>Baseline, because it came before the app</button>
+<button>Counterfactual, because it describes the other world</button>
+<button>Control group, because it was left unchanged</button>
+<button data-correct>Confounder, because it could drive the result</button>
+<div class="why">Higher pay could itself reduce no-shows, muddying the app's effect.</div></div>
+
+<div class="quiz"><p>Which design gives the strongest evidence that the app reduces no-shows?</p>
+<button>Compare no-shows this month against last month</button>
+<button>Survey workers about whether they like the app</button>
+<button data-correct>Give the app to 5 of 10 branches, compare changes</button>
+<button>Count how many agencies renewed their contract</button>
+<div class="why">Treated and untreated branches share the same season and market, so comparing their changes isolates the app's effect (ideally with random choice of branches).</div></div>
+
+<h2>Apply it</h2>
+<p>Pick one claim: "60% better retention". In the box, write (1) the metric, (2) the baseline you'd collect, (3) the comparison group, (4) one confounder to watch for.</p>
+<textarea class="recall" placeholder="Metric… Baseline… Comparison group… Confounder…"></textarea>
+<details class="reveal"><summary>One good answer</summary>Metric: share of workers still taking shifts after 90 days. Baseline: the same figure for the prior 6 months. Comparison: branches not yet on the app. Confounder: a pay-rate change or a seasonal peak. Also ask how the vendor defined "retention".</details>
+
+<h2>Join a community (wisdom)</h2>
+<p>Real-world judgement comes from practitioners. <a href="https://www.reddit.com/r/Recruitment/">r/Recruitment</a> is open to candidates, agency recruiters and system developers alike. Try asking: "Agency folks, what made a scheduling app worth switching to, and how did you check it worked?" Read the rules first, and report back what you learn. <a href="https://www.reddit.com/r/RecruitmentAgencies/">r/RecruitmentAgencies</a> leans toward agency owners. Skip this if you'd rather not, and tell me.</p>
+
+<h2>Read next</h2>
+<p><strong>Primary source:</strong> <a href="https://statsig.com/perspectives/ab-testing-correlation-causation-pitfalls">Statsig on correlation vs causation in tests</a>. It's a vendor blog, but the concepts are standard.</p>
+<div class="note"><strong>Ask your teacher.</strong> Questions on confounders, control groups or what a fair test would look like for a staffing agency? Ask in the terminal.</div>
+</main><script src="../assets/quiz.js"></script></body></html>

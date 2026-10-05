@@ -1,0 +1,27 @@
+:root{--bg:#fffdf8;--fg:#1d1d1b;--mute:#6b6a64;--rule:#dcd8cc;--accent:#1f5f4a;--ok:#1f6f3f;--bad:#a23a2a;--card:#f6f2e7}
+@media(prefers-color-scheme:dark){:root{--bg:#161614;--fg:#ece9df;--mute:#9a978c;--rule:#33322d;--accent:#7cc4a6;--ok:#7cd09a;--bad:#e8917f;--card:#1f1f1c}}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);color:var(--fg);font:18px/1.6 Georgia,"Iowan Old Style",serif}
+main{max-width:40rem;margin:0 auto;padding:3rem 1rem 5rem}
+h1{font-size:2rem;line-height:1.2;margin:.2em 0}
+h2{font-size:1.2rem;margin:2.2em 0 .4em;border-top:1px solid var(--rule);padding-top:1em}
+.kicker{font:600 .75rem/1 system-ui,sans-serif;letter-spacing:.1em;text-transform:uppercase;color:var(--accent)}
+.lede{color:var(--mute);font-size:1.1rem}
+a{color:var(--accent)}
+table{border-collapse:collapse;width:100%;font:.9rem/1.4 system-ui,sans-serif;margin:1em 0}
+th,td{text-align:left;padding:.5em .6em;border-bottom:1px solid var(--rule);vertical-align:top}
+.note{background:var(--card);border-left:3px solid var(--accent);padding:.7em 1em;font-size:.95rem;margin:1.2em 0}
+.claim{font-size:.8rem;color:var(--mute);font-family:system-ui,sans-serif}
+nav.crumbs{font:.8rem system-ui,sans-serif;margin-bottom:1.5rem}
+.quiz{margin:1.5em 0;padding:1em;background:var(--card);border-radius:6px;font-family:system-ui,sans-serif}
+.quiz p{margin:.2em 0 .7em;font-family:Georgia,serif}
+.quiz button{display:block;width:100%;text-align:left;margin:.35em 0;padding:.6em .8em;font:inherit;font-size:.95rem;color:var(--fg);background:var(--bg);border:1px solid var(--rule);border-radius:5px;cursor:pointer}
+.quiz button:hover:not(:disabled){border-color:var(--accent)}
+.quiz button.ok{border-color:var(--ok);background:color-mix(in srgb,var(--ok) 15%,var(--bg))}
+.quiz button.bad{border-color:var(--bad);background:color-mix(in srgb,var(--bad) 15%,var(--bg))}
+.quiz .why{display:none;font-size:.9rem;margin-top:.6em;color:var(--mute)}
+.quiz.done .why{display:block}
+textarea.recall{width:100%;min-height:5em;font:inherit;font-size:1rem;padding:.6em;background:var(--bg);color:var(--fg);border:1px solid var(--rule);border-radius:5px}
+details.reveal{margin:.6em 0;font-family:system-ui,sans-serif;font-size:.95rem}
+table.rice input{width:4.5rem;font:inherit;padding:.25em;background:var(--bg);color:var(--fg);border:1px solid var(--rule);border-radius:4px}
+table.rice .score,table.rice .rank{font-weight:600}
